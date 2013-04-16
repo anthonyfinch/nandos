@@ -1,0 +1,3 @@
+database:
+  pre:
+      - psql -U ubuntu circle_test -c "CREATE EXTENSION postgis"
