@@ -1,0 +1,10 @@
+:tddium:
+  :tests:
+    - python manage.py test 
+  :python:
+    :python_version: 2.7
+    :pip_requirements_file: requirements.txt
+  :postgresql:
+    :version: '9.1'
+		:config:
+			postgis_extension: true
