@@ -1,4 +1,15 @@
-# Django settings for trtest project.
+import os
+
+from django.core.exceptions import ImproperlyConfigured
+
+
+def get_env_variable(var_name):
+    """ Get the environment variable or return exception """
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        error_msg = "Set the %s env variable" % var_name
+        raise ImproperlyConfigured(error_msg)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -12,9 +23,9 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'nandos',                      # Or path to database file if using sqlite3.
-        'USER': 'nandos',                      # Not used with sqlite3.
-        'PASSWORD': 'nandos',                  # Not used with sqlite3.
+        'NAME': get_env_variable('TDDIUM_DB_NAME'),                      # Or path to database file if using sqlite3.
+        'USER': get_env_variable('TDDIUM_DB_USER'),                      # Not used with sqlite3.
+        'PASSWORD': get_env_variable('TDDIUM_DB_PASSWORD'),                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
