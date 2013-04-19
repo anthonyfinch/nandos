@@ -2,7 +2,7 @@
   :hooks:
     :pre: psql $TDDIUM_DB_NAME -c 'CREATE EXTENSION postgis;'
   :tests:
-    - python manage.py test 
+    - python manage.py test --noinput
   :python:
     :python_version: 2.7
     :pip_requirements_file: requirements.txt
