@@ -3,6 +3,8 @@
     :worker: bash -x test_setup.sh
   :tests:
     - python manage.py test --noinput
+  :environment:
+    REUSE_DB: 1
   :python:
     :python_version: 2.7
     :pip_requirements_file: requirements.txt
