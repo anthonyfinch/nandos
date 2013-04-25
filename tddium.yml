@@ -1,6 +1,6 @@
 :tddium:
   :hooks:
-    :worker: psql $TDDIUM_DB_NAME -c 'CREATE EXTENSION postgis;'
+    :worker: bash -x test_setup.sh
   :tests:
     - python manage.py test --noinput
   :python:
