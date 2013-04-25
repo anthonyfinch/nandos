@@ -28,7 +28,6 @@ DATABASES = {
         'PASSWORD': get_env_variable('TDDIUM_DB_PASSWORD'),                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-        'TEST_NAME': get_env_variable('TDDIUM_DB_NAME'),
     }
 }
 
