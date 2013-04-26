@@ -24,8 +24,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'nandos',                      # Or path to database file if using sqlite3.
-        'USER': 'nandos',                      # Not used with sqlite3.
-        'PASSWORD': 'nandos',                  # Not used with sqlite3.
+        'USER': get_env_variable('DBA_POSTGRESQL_ADMIN'),                      # Not used with sqlite3.
+        'PASSWORD': get_env_variable('DBA_POSTGRESQL_ADMIN_PASSWORD'),                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
