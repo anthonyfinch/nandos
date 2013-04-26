@@ -23,12 +23,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': get_env_variable('TDDIUM_DB_NAME'),                      # Or path to database file if using sqlite3.
-        'USER': get_env_variable('TDDIUM_DB_USER'),                      # Not used with sqlite3.
-        'PASSWORD': get_env_variable('TDDIUM_DB_PASSWORD'),                  # Not used with sqlite3.
+        'NAME': 'nandos',                      # Or path to database file if using sqlite3.
+        'USER': 'nandos',                      # Not used with sqlite3.
+        'PASSWORD': 'nandos',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-        'TEST_NAME': get_env_variable('TDDIUM_DB_NAME'),
     }
 }
 
@@ -135,7 +134,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
-
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
