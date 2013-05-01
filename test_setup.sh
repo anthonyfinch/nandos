@@ -47,3 +47,6 @@ if [ $GEOGRAPHY -eq 1 ]
 then
     psql -d template_postgis -c "GRANT ALL ON geography_columns TO PUBLIC;"
 fi
+
+dropdb "$TDDIUM_DB_NAME"
+createdb -T template_postgis "$TDDIUM_DB_NAME"
