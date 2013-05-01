@@ -39,3 +39,6 @@ then
 fi
 
 createdb -T template_postgis nandos
+
+touch test.txt;
+echo "HA" > test.txt;
