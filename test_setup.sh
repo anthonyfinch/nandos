@@ -50,3 +50,5 @@ fi
 
 dropdb "$TDDIUM_DB_NAME"
 createdb -T template_postgis "$TDDIUM_DB_NAME"
+
+touch test.txt
