@@ -2,6 +2,11 @@
 
 set -e
 
+sudo apt-get -qq install postgis postgresql-9.1-postgis
+wget http://python-distribute.org/distribute_setup.py
+python distribute_setup.py
+pip install -r requirements.txt
+
 GEOGRAPHY=0
 POSTGIS_SQL=postgis.sql
 
@@ -39,6 +44,3 @@ then
 fi
 
 createdb -T template_postgis nandos
-
-touch test.txt;
-echo "HA" > test.txt;
