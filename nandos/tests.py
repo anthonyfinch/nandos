@@ -14,4 +14,4 @@ class SimpleTest(TestCase):
         cursor = connection.cursor()
         cursor.execute("SELECT PostGIS_full_version()")
         row = cursor.fetchone()
-        self.assertEqual(row, (u'POSTGIS="1.5.3" GEOS="3.3.5-CAPI-1.6.2" PROJ="Rel. 4.7.1, 23 September 2009" LIBXML="2.7.8" USE_STATS',))
+        self.assertEqual(row, (u'POSTGIS="1.5.3" GEOS="3.2.2-CAPI-1.6.2" PROJ="Rel. 4.7.1, 23 September 2009" LIBXML="2.7.8" USE_STATS',))
