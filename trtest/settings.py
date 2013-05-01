@@ -129,11 +129,13 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'django.contrib.gis',
+    'django_nose',
     'nandos',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
 
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
