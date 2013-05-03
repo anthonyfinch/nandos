@@ -1,6 +1,6 @@
 #! /bin/sh
 
-#dsf
+#sdfsdfsd
 set -e
 
 sudo apt-get -qq install postgis postgresql-9.1-postgis
