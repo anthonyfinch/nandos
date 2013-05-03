@@ -1,5 +1,6 @@
 #! /bin/sh
 
+# Test
 set -e
 
 echo $TDDIUM_DB_NAME
